@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarm Clock</title>
     <!-- Adding Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <!-- Adding CSS links -->
     <link rel="stylesheet" type="text/css" href="alarm.css">
 </head>
@@ -21,13 +21,14 @@
     <main class="main-container display-flex">
         <!-- Clock Container -->
         <div class="clock-container display-flex">
+            <div id="img"><img src="/images/clock.svg"></div>
             <!-- Cuurent time section -->
-            <div id="current-time">
+            <div class="current-time margin-bottom">
                 _:_:_
             </div>
             <!-- End Current time section-->
             <!-- Start Form Section -->
-            <form class="alarm-form display-flex">
+            <form class="alarm-form display-flex margin-bottom" >
                 <div>
                     <select name="hours" id="hours" required></select>
                     
@@ -43,7 +44,7 @@
             <!-- End Form Section -->
             <!-- Alarm Section -->
             <div class="set-alarm-container">
-                <div class="set-alarm-container-title">ALARAMS</div>
+                <div class="set-alarm-container-title margin-bottom">ALARAMS</div>
                 <div class="alarm-container"></div>
             </div>
             <!-- End of Alarm Section -->
