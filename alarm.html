@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ar</title>
+    <title>Alarm Clock</title>
+    <!-- Adding Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- Adding CSS links -->
+    <link rel="stylesheet" type="text/css" href="alarm.css">
 </head>
 <body>
-    
+    <!-- Page Heading -->
+    <header id="page-title">
+        <h1>Alarm Clock ⏰</h1>
+    </header>
+    <!-- End Page Heading -->
+
+    <!-- Main Body -->
+    <main class="main-container display-flex">
+        <!-- Clock Container -->
+        <div class="clock-container display-flex">
+            <!-- Cuurent time section -->
+            <div id="current-time">
+                _:_:_
+            </div>
+            <!-- End Current time section-->
+            <!-- Start Form Section -->
+            <form class="alarm-form display-flex">
+                <div>
+                    <select name="hours" id="hours" required></select>
+                    
+                    <select name="minutes" id="minutes" required></select>
+
+                    <select id="am-pm" name="am-pm" required>
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+                <button class="btn submit-btn" type="submit">Set Alarm</button>
+            </form>
+            <!-- End Form Section -->
+            <!-- Alarm Section -->
+            <div class="set-alarm-container">
+                <div class="set-alarm-container-title">ALARAMS</div>
+                <div class="alarm-container"></div>
+            </div>
+            <!-- End of Alarm Section -->
+        </div>
+        <!--End Clock Container -->
+    </main>
+    <!-- End Main Body -->
+
+    <!-- Adding javascript links -->
+    <script src="alarm.js"></script>
 </body>
 </html>
