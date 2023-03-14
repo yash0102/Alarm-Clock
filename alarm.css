@@ -1,0 +1,111 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+/* Global CSS property */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    /* background-color: #0e141b; */
+    background-color: #4a98f7;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background-color: rgb(243, 200, 120);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+select {
+    outline: none;
+    border: none;
+    background-color: rgb(243, 200, 120);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.margin-bottom{
+    margin-bottom: 0.5rem;
+}
+
+img {
+    max-width: 103px;
+    margin-left: 4.1rem;   
+}
+
+
+
+/* End of Global CSS property */
+
+/* Page Header */
+#page-title{ 
+    align-items: center;  
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    height: 4rem;
+    padding-top: 0.6rem;
+}
+
+/* main container*/
+.main-container{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-container{
+    background-color: #fff;
+    padding: 2rem;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #1890FF; */
+    /* flex-flow: column; */
+    /* justify-content: space-around; */
+}
+
+.current-time{
+    font-size: 2rem;
+}
+
+.alarm-form{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.submit-btn{
+    border-color: black;
+    border: 10px;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+.set-alarm-container .set-alarm-container-title{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* .alarm{
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.5rem 1 rem;
+    align-items: center;
+} */
+
