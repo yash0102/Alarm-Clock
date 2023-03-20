@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarm Clock</title>
     <!-- Adding Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <!-- Adding CSS links -->
-    <link rel="stylesheet" type="text/css" href="alarm.css">
+    <link rel="stylesheet" type="text/css" href="/assets/alarm.css">
 </head>
 <body>
+    <audio id="alarm-sound" src="./assets/The_Boys.mpeg"></audio>
     <!-- Page Heading -->
     <header id="page-title">
         <h1>Alarm Clock ⏰</h1>
@@ -21,11 +22,9 @@
     <main class="main-container display-flex">
         <!-- Clock Container -->
         <div class="clock-container display-flex">
-            <div id="img"><img src="/images/clock.svg"></div>
+            <div id="img"><img src="/assets/clock.svg"></div>
             <!-- Cuurent time section -->
-            <div class="current-time margin-bottom">
-                _:_:_
-            </div>
+            <div class="current-time margin-bottom" id="current-time"> _:_:_ </div>
             <!-- End Current time section-->
             <!-- Start Form Section -->
             <form class="alarm-form display-flex margin-bottom" >
@@ -34,18 +33,20 @@
                     
                     <select name="minutes" id="minutes" required></select>
 
+                    <select name="seconds" id="seconds" required></select>
+
                     <select id="am-pm" name="am-pm" required>
                         <option value="AM">AM</option>
                         <option value="PM">PM</option>
                     </select>
                 </div>
-                <button class="btn submit-btn" type="submit">Set Alarm</button>
+                <button class="btn submit-btn" id="submitButton" type="submit">Set Alarm</button>
             </form>
             <!-- End Form Section -->
             <!-- Alarm Section -->
             <div class="set-alarm-container">
                 <div class="set-alarm-container-title margin-bottom">ALARAMS</div>
-                <div class="alarm-container"></div>
+                <div class="alarm-container" id="alarms-container"></div>
             </div>
             <!-- End of Alarm Section -->
         </div>
@@ -54,6 +55,6 @@
     <!-- End Main Body -->
 
     <!-- Adding javascript links -->
-    <script src="alarm.js"></script>
+    <script src="/assets/alarm.js"></script>
 </body>
 </html>
