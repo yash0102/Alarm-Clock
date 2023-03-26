@@ -62,7 +62,14 @@ function getInput(e){
         AmPmValue
     );
 
-    setAlarm(alarmTime);
+     // check if alarm already exists
+     const alarms = checkAlarms();
+     const isAlarmAlreadySet = alarms.includes(alarmTime);
+     if(isAlarmAlreadySet){
+         alert('Alarm already set for this time');
+     }else{
+         setAlarm(alarmTime);
+     }
 }
 
 
