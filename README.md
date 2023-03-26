@@ -9,7 +9,7 @@ Code (comments, structuring, variable/function naming) (Max Score 10)
 Features (Max Score 30)
 
 
-![Example Image](alarm-clock.png)
+![Example Image](/assets/alarm-clock.png)
 
 
 
