@@ -96,6 +96,7 @@ function setAlarm(time, fetching = false){
     if(!fetching){
         saveAlarm(time);
     }
+    return alarm;
 }
 
 
@@ -131,12 +132,26 @@ function addAlarmToDom(time, intervalId){
     alarm.classList.add('alarm', 'margin-bottom','display-flex');
     alarm.innerHTML = `
     <div class ="time">${time}</div>
+    <button class= "btn stop-alarm" data-id= ${intervalId}>Stop</button>
     <button class= "btn delete-alarm" data-id= ${intervalId}>Delete</button> `;
+    
     
     const deleteButton = alarm.querySelector('.delete-alarm');
     deleteButton.addEventListener('click',(e)=> deleteAlarm(e, time ,intervalId));
+
+    const stopButton = alarm.querySelector('.stop-alarm');
+    stopButton.addEventListener('click', (e) => stopAlarm(e, intervalId));
+
+
     // The 'prepend()' method is used to add the new 'alarm' element as the first child of 'alarmContainer'.
     alarmContainer.prepend(alarm);
+}
+
+ // function to stop the alarm
+function stopAlarm(event, intervalId) {
+    clearInterval(intervalId);
+    alarmSound.pause();
+    alarmSound.currentTime = 0;
 }
 
 // delete alarm

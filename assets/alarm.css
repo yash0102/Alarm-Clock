@@ -100,28 +100,39 @@ select {
     border-color: black;
     border-radius: 2rem;
     font-weight: bold;
+    background-color: #006B3F;
+    color: aliceblue;
 }
 
-.set-alarm-container .set-alarm-container-title{
+.set-alarm-container ,.set-alarm-container-title{
     font-weight: bold;
     font-size: 1.6rem;
     text-align: center;
+    width: 100%;
 }
 
 .alarm{
     justify-content: space-between;
     border-radius: 30px;
-    padding: 0.5rem 1 rem;
+    /* padding: 0.5rem; */
+    margin: 13px;
     align-items: center;
 }
 
  .delete-alarm{
-    justify-content: space-between;
     border-radius: 1rem;
     background-color: rgba(230, 13, 13, 0.918);
     font-weight: bold;
     font-size: xx-medium;
-    margin-left: 10rem;
+}
+
+.stop-alarm{
+    /* justify-content: right; */
+    border-radius: 1rem;
+    background-color: #CFB317;
+    font-weight: bold;
+    font-size: xx-medium;
+    /* margin-left: 4rem; */
 }
 
 .time{
