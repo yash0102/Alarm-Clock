@@ -35,7 +35,7 @@ function dropDownMenu(start , end , element){
 // Adding Hours , minutes , seconds in dropdown menu
 
 window.addEventListener('DOMContentLoaded',(event)=>{
-    dropDownMenu(1, 12, hours);
+    dropDownMenu(0, 12, hours);
 
     dropDownMenu(0, 59, minutes);
 
@@ -75,8 +75,13 @@ function getInput(e){
 
 // converting time to 24 hour format
 function convertToTime(hour,minute,second,AmPm){
-    return `${parseInt(hour)}:${minute}:${second} ${AmPm}`;
+    hour = parseInt(hour); // Convert hour to integer
+    if (hour < 10) {
+        hour = "0" + hour; // Add leading zero if hour is a single digit number
+    }
+    return `${hour}:${minute}:${second} ${AmPm}`;
 }
+
 /*  if the function is called with the arguments 10, 30, 00, and PM,
  it will return the string "22:30:00 PM", which represents the same time in 24-hour format.
  Note that the function does not actually convert the time to 24-hour format, */
