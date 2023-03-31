@@ -35,7 +35,7 @@ function dropDownMenu(start , end , element){
 // Adding Hours , minutes , seconds in dropdown menu
 
 window.addEventListener('DOMContentLoaded',(event)=>{
-    dropDownMenu(0, 12, hours);
+    dropDownMenu(1, 12, hours);
 
     dropDownMenu(0, 59, minutes);
 
