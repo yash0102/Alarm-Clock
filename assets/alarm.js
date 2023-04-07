@@ -9,16 +9,30 @@ const alarmSound = document.getElementById('alarm-sound');
 
 
 function getCurrentTime(){
-    let time = new Date();
-    time = time.toLocaleTimeString('en-US', {
-        hour : "numeric",
-        minute: "numeric",
-        second:"numeric",
-        hour12: true
-    });
-    // This updates the content of the HTML element to display the current time.
-    currentTime.innerHTML = time;
-    return time;
+    const timeOptions = {
+        hour12: true,
+        //we simplify the formatting options by using the "2-digit" format for the hour, minute, and second,
+        // which will automatically add leading zeros for values less than 10
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      };
+      const timeString = new Date().toLocaleTimeString("en-US", timeOptions);
+      // This updates the content of the HTML element to display the current time.
+      currentTime.innerHTML = timeString;
+      return timeString
+
+      
+    // let time = new Date();
+    // time = time.toLocaleTimeString('en-US', {
+    //     hour : "numeric",
+    //     minute: "numeric",
+    //     second:"numeric",
+    //     hour12: true
+    // });
+    // currentTime.innerHTML = time;
+    // return time;
+
 }
 
 
